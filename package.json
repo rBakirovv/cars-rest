@@ -1,0 +1,18 @@
+{
+  "name": "car-catalog",
+  "version": "1.0.0",
+  "description": "Car catalog application with React + Node.js + PostgreSQL",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:auto": "concurrently \"npm run dev:backend:auto\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:backend:auto": "cd backend && npm run dev:auto",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
